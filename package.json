@@ -1,0 +1,20 @@
+{
+  "name": "auto-label-pr",
+  "version": "1.0.0",
+  "description": "GitHub Action that automatically labels PRs based on changed file paths",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist"
+  },
+  "author": "Zakaria GAFAOUI",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "js-yaml": "^4.1.0",
+    "minimatch": "^9.0.3"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1"
+  }
+}

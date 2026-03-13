@@ -1,0 +1,20 @@
+name: 'Auto Label PR'
+description: 'Automatically label pull requests based on changed file paths'
+author: 'Zakaria GAFAOUI'
+branding:
+  icon: 'tag'
+  color: 'blue'
+
+inputs:
+  token:
+    description: 'GitHub token'
+    required: false
+    default: ${{ github.token }}
+  config:
+    description: 'Path to label config file'
+    required: false
+    default: '.github/auto-label.yml'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
